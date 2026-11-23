@@ -55,7 +55,7 @@
   .hero {
     position: relative;
     min-height: 92vh;
-    min-height: clamp(92svh, 66.7vw, 1000px);
+    min-height: clamp(max(92svh, 700px), 66.7vw, 1000px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,15 +97,19 @@
     border: 1px solid rgba(255,255,255,0.35);
     padding: 6px 14px;
     border-radius: 999px;
+    white-space: nowrap;
     backdrop-filter: blur(4px);
   }
   h1 {
     font-family: "Shrikhand", Georgia, serif;
     font-weight: 400;
-    font-size: clamp(2.8rem, 11vw, 5.6rem);
-    line-height: 1.02;
+    font-size: clamp(2.3rem, 10vw, 4.6rem);
+    line-height: 1.08;
     margin: 18px 0 10px;
     text-shadow: 0 4px 24px rgba(61, 31, 71, 0.45);
+  }
+  @media (max-width: 420px) {
+    .eyebrow { font-size: 0.7rem; letter-spacing: 0.1em; padding: 5px 12px; }
   }
   .hero-when {
     font-size: clamp(1.1rem, 4.4vw, 1.45rem);
@@ -232,9 +236,21 @@
     background: #e9f5f7;
     border-radius: 14px;
     padding: 12px 16px;
-    margin-top: 16px;
+    margin-top: 12px;
     color: var(--sea-deep);
     font-weight: 700;
+  }
+
+  .badge {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(19, 74, 94, 0.15);
   }
 
   /* RSVP */
@@ -320,17 +336,6 @@
     padding: 16px 18px 16px 18px;
     color: #fff;
     overflow: hidden;
-  }
-  @media (max-width: 559px) { .court::after { display: none; } }
-  .court::after {
-    /* little net line for flavor */
-    content: "";
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    right: 22%;
-    width: 0;
-    border-left: 3px dashed rgba(255,255,255,0.35);
   }
   .court .label {
     font-family: "Shrikhand", Georgia, serif;
@@ -543,7 +548,7 @@
       <div class="fact">
         <div>
           <h3>Presents</h3>
-          <p>Not allowed.</p>
+          <p>Not allowed. Your presence is my present.</p>
         </div>
       </div>
     </div>
@@ -553,11 +558,15 @@
   <section class="card note">
     <h2>A note from Eric</h2>
     <p>I'm turning an undisclosed age. Don't worry about it.</p>
-    <p>The courts are rented, so just come and buy a drink or two for yourself (that helps the business). No presents allowed. Your presence is my present.</p>
+    <p>The courts are rented, so just come and buy a drink or two for yourself (that helps the business).</p>
     <p class="sig">~ Eric</p>
     <div class="plus-one">
-      <span style="font-size:1.4rem">💛</span>
+      <span class="badge">🧡</span>
       <span>You are encouraged to +1 your volleyball-playing significant other.</span>
+    </div>
+    <div class="plus-one">
+      <span class="badge">🤙</span>
+      <span>We have limited spots though, so please check with me before sharing the event with additional people.</span>
     </div>
   </section>
 

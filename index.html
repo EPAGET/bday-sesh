@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eric's Bday Sesh · Beach Volleyball · Dec 18</title>
+
+<!-- Keep this page out of search engines -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- How the link looks when you text it -->
+<meta name="description" content="Friday, Dec 18, 7 to 10 PM at Treasure Valley Beach. Doubles, sunsets (in spirit), and good people.">
+<meta property="og:title" content="Eric's Bday Sesh 🏐">
+<meta property="og:description" content="Friday, Dec 18 · 7 to 10 PM · Treasure Valley Beach, Meridian">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ====== EDIT THESE TWO LINKS AFTER SETTING UP THE FORM AND SHEET ====== */
+  /* (They live in the script at the bottom; see CONFIG.) */
+
+  :root {
+    --plum: #3d1f47;
+    --berry: #a63d63;
+    --coral: #f0735a;
+    --mango: #f9a03f;
+    --gold: #ffd27a;
+    --sea: #1d6b85;
+    --sea-deep: #134a5e;
+    --sand: #f3dcb2;
+    --cream: #fff7ec;
+    --ink: #3a2629;
+    --ink-soft: #6e5550;
+    --card: #ffffff;
+    --radius: 18px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 92vh;
+    min-height: clamp(92svh, 66.7vw, 1000px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+  }
+  .hero svg.scene {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .hero::after {
+    /* soft fade from the sand into the page */
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 140px;
+    background: linear-gradient(180deg, rgba(255,247,236,0), var(--cream));
+    z-index: 0;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 6vh 20px 0;
+    max-width: 720px;
+  }
+  .eyebrow {
+    display: inline-block;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35);
+    padding: 6px 14px;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+  }
+  h1 {
+    font-family: "Shrikhand", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.8rem, 11vw, 5.6rem);
+    line-height: 1.02;
+    margin: 18px 0 10px;
+    text-shadow: 0 4px 24px rgba(61, 31, 71, 0.45);
+  }
+  .hero-when {
+    font-size: clamp(1.1rem, 4.4vw, 1.45rem);
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 0 2px 12px rgba(61, 31, 71, 0.5);
+  }
+  .hero-where {
+    font-weight: 600;
+    margin: 4px 0 26px;
+    opacity: 0.95;
+    text-shadow: 0 2px 12px rgba(61, 31, 71, 0.5);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--plum);
+    background: linear-gradient(180deg, #fff3d6, var(--gold));
+    padding: 16px 34px;
+    border-radius: 999px;
+    box-shadow: 0 10px 28px rgba(61, 31, 71, 0.35), inset 0 -3px 0 rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    min-height: 54px;
+  }
+  .hero-cta {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px 22px;
+  }
+  .btn.sea {
+    color: #fff;
+    background: linear-gradient(180deg, #2a86a3, var(--sea-deep));
+    box-shadow: 0 10px 26px rgba(19, 74, 94, 0.4), inset 0 -3px 0 rgba(0,0,0,0.12);
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(61, 31, 71, 0.4); }
+  .btn:active { transform: translateY(0); }
+  .btn.alt {
+    background: linear-gradient(180deg, var(--coral), #e2583f);
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(240, 115, 90, 0.35);
+  }
+
+  /* ---------- LAYOUT ---------- */
+  main {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    margin: 10px auto 0;
+    padding: 0 16px 60px;
+  }
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 24px rgba(166, 61, 99, 0.10), 0 1px 3px rgba(61, 31, 71, 0.06);
+  }
+  h2 {
+    font-family: "Shrikhand", Georgia, serif;
+    font-weight: 400;
+    font-size: 1.85rem;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    color: var(--berry);
+  }
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: 0 0 4px;
+  }
+  p { margin: 0 0 12px; }
+  p:last-child { margin-bottom: 0; }
+  .muted { color: var(--ink-soft); }
+
+  /* Quick facts */
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 560px) {
+    .facts { grid-template-columns: 1fr 1fr; }
+  }
+  .fact {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #fff4e4, #ffe9d6);
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .fact .icon {
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .fact a { color: var(--sea); font-weight: 700; }
+
+  /* Note from Eric */
+  .note {
+    position: relative;
+    background: linear-gradient(160deg, #fff, #fff6ea);
+    border-left: 6px solid var(--coral);
+  }
+  .note p { font-size: 1.08rem; }
+  .note .sig {
+    font-family: "Shrikhand", Georgia, serif;
+    color: var(--coral);
+    font-size: 1.3rem;
+    margin-top: 6px;
+  }
+  .plus-one {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: #e9f5f7;
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-top: 16px;
+    color: var(--sea-deep);
+    font-weight: 700;
+  }
+
+  /* RSVP */
+  .rsvp { text-align: center; }
+  .rsvp .btn { margin: 6px 0 22px; }
+  .count {
+    font-weight: 800;
+    color: var(--sea-deep);
+    margin-bottom: 12px;
+  }
+  .names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .names li {
+    background: linear-gradient(180deg, #fff1dc, #ffe2bf);
+    color: var(--plum);
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.98rem;
+  }
+  .names-empty { color: var(--ink-soft); font-style: italic; }
+
+  /* Format */
+  .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--berry);
+    background: #fbe4ea;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 26px;
+    counter-reset: step;
+  }
+  .steps li {
+    position: relative;
+    padding: 0 0 18px 52px;
+    counter-increment: step;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, var(--mango), var(--coral));
+  }
+  .steps li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 38px;
+    bottom: 4px;
+    width: 2px;
+    background: #f7d2b8;
+  }
+
+  /* Court ladder */
+  .ladder { margin: 8px 0 6px; display: grid; gap: 12px; }
+  .court {
+    position: relative;
+    border-radius: 16px;
+    padding: 16px 18px 16px 18px;
+    color: #fff;
+    overflow: hidden;
+  }
+  @media (max-width: 559px) { .court::after { display: none; } }
+  .court::after {
+    /* little net line for flavor */
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 22%;
+    width: 0;
+    border-left: 3px dashed rgba(255,255,255,0.35);
+  }
+  .court .label {
+    font-family: "Shrikhand", Georgia, serif;
+    font-size: 1.35rem;
+    line-height: 1.1;
+  }
+  .court .sub { font-weight: 700; opacity: 0.95; font-size: 0.95rem; }
+  .court.c1 { background: linear-gradient(120deg, var(--coral), var(--mango)); }
+  .court.c2 { background: linear-gradient(120deg, var(--berry), var(--coral)); }
+  .court.c3 { background: linear-gradient(120deg, var(--sea-deep), var(--sea)); }
+
+  .moves {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 4px;
+  }
+  .move {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .move .arrow {
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .move.up .arrow { color: #2f9a6a; }
+  .move.down .arrow { color: var(--berry); }
+
+  .fine {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    background: #fff4e4;
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-top: 18px;
+  }
+  .fine ul { margin: 6px 0 0; padding-left: 20px; }
+  .fine li { margin-bottom: 4px; }
+
+  footer {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    padding: 10px 20px 40px;
+  }
+  footer .ball { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sun { animation: glow 6s ease-in-out infinite alternate; }
+    @keyframes glow { from { opacity: 0.92; } to { opacity: 1; } }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <svg class="scene" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3d1f47"/>
+        <stop offset="0.35" stop-color="#8e3a63"/>
+        <stop offset="0.62" stop-color="#ee6f57"/>
+        <stop offset="0.82" stop-color="#f9a03f"/>
+        <stop offset="1" stop-color="#ffd27a"/>
+      </linearGradient>
+      <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#fff2c2" stop-opacity="0.95"/>
+        <stop offset="0.5" stop-color="#ffd27a" stop-opacity="0.45"/>
+        <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#c8566a"/>
+        <stop offset="0.25" stop-color="#7a3b62"/>
+        <stop offset="1" stop-color="#1d4f66"/>
+      </linearGradient>
+      <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f6c98f"/>
+        <stop offset="1" stop-color="#e9b27a"/>
+      </linearGradient>
+      <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0.75" stop-color="#fff7ec" stop-opacity="0"/>
+        <stop offset="1" stop-color="#fff7ec" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- sky -->
+    <rect width="1200" height="800" fill="url(#sky)"/>
+
+    <!-- a few soft clouds -->
+    <g fill="#ffd9b0" opacity="0.35">
+      <ellipse cx="220" cy="250" rx="140" ry="12"/>
+      <ellipse cx="300" cy="268" rx="90" ry="8"/>
+      <ellipse cx="930" cy="215" rx="160" ry="13"/>
+      <ellipse cx="1010" cy="236" rx="80" ry="7"/>
+    </g>
+
+    <!-- sun -->
+    <circle cx="600" cy="470" r="230" fill="url(#sunGlow)"/>
+    <circle class="sun" cx="600" cy="470" r="95" fill="#fff0c4"/>
+
+    <!-- ocean -->
+    <rect x="0" y="470" width="1200" height="160" fill="url(#sea)"/>
+    <!-- sun reflection on water -->
+    <g fill="#ffe3a8" opacity="0.8">
+      <rect x="520" y="482" width="160" height="5" rx="2.5"/>
+      <rect x="545" y="498" width="110" height="4" rx="2"/>
+      <rect x="565" y="514" width="70" height="4" rx="2"/>
+      <rect x="580" y="530" width="40" height="3" rx="1.5"/>
+      <rect x="590" y="545" width="20" height="3" rx="1.5"/>
+    </g>
+    <!-- gentle wave lines -->
+    <g stroke="#ffb98a" stroke-width="2" fill="none" opacity="0.35">
+      <path d="M60 560 q30 -8 60 0 t60 0"/>
+      <path d="M880 575 q30 -8 60 0 t60 0"/>
+      <path d="M300 595 q30 -8 60 0 t60 0"/>
+    </g>
+
+    <!-- sand -->
+    <path d="M0 610 C 250 585, 450 600, 650 598 S 1000 585, 1200 605 L1200 800 L0 800 Z" fill="url(#sandGrad)"/>
+
+    <!-- volleyball net (silhouette) -->
+    <g fill="#3d1f47" stroke="#3d1f47">
+      <rect x="330" y="560" width="7" height="140" stroke="none"/>
+      <rect x="863" y="560" width="7" height="140" stroke="none"/>
+      <rect x="337" y="568" width="526" height="5" stroke="none"/>
+      <rect x="337" y="612" width="526" height="3" stroke="none"/>
+    </g>
+    <g stroke="#3d1f47" stroke-width="1.2" opacity="0.55">
+      <!-- vertical mesh -->
+      <path d="M357 573v39 M377 573v39 M397 573v39 M417 573v39 M437 573v39 M457 573v39 M477 573v39 M497 573v39 M517 573v39 M537 573v39 M557 573v39 M577 573v39 M597 573v39 M617 573v39 M637 573v39 M657 573v39 M677 573v39 M697 573v39 M717 573v39 M737 573v39 M757 573v39 M777 573v39 M797 573v39 M817 573v39 M837 573v39 M857 573v39"/>
+      <!-- horizontal mesh -->
+      <path d="M337 586h526 M337 599h526"/>
+    </g>
+    <!-- net lines -->
+    <line x1="333" y1="563" x2="290" y2="700" stroke="#3d1f47" stroke-width="2" opacity="0.6"/>
+    <line x1="867" y1="563" x2="910" y2="700" stroke="#3d1f47" stroke-width="2" opacity="0.6"/>
+
+    <!-- volleyball mid-air -->
+    <g transform="translate(700 395)">
+      <circle r="17" fill="#fff6e6"/>
+      <path d="M-17 0 C -6 -6, 6 -6, 17 0" stroke="#f0735a" stroke-width="3" fill="none"/>
+      <path d="M-8 -15 C -2 -4, -2 6, -10 13" stroke="#1d6b85" stroke-width="3" fill="none"/>
+      <path d="M8 -15 C 13 -4, 12 6, 6 15" stroke="#f9a03f" stroke-width="3" fill="none"/>
+    </g>
+
+    <!-- left palm -->
+    <g fill="#2b1533">
+      <path d="M120 800 C 130 700, 150 560, 205 430 L 214 434 C 165 560, 148 700, 146 800 Z"/>
+      <path d="M208 430 C 150 395, 80 405, 30 450 C 95 420, 150 420, 206 438 Z"/>
+      <path d="M208 430 C 170 370, 105 345, 50 352 C 115 370, 160 395, 204 436 Z"/>
+      <path d="M210 430 C 230 365, 280 335, 340 340 C 285 360, 245 390, 214 436 Z"/>
+      <path d="M210 432 C 270 410, 335 425, 380 470 C 320 440, 265 435, 212 440 Z"/>
+      <path d="M208 430 C 205 375, 220 330, 250 300 C 232 345, 222 385, 212 434 Z"/>
+    </g>
+
+    <!-- right palm -->
+    <g fill="#2b1533">
+      <path d="M1095 800 C 1088 690, 1070 590, 1020 480 L 1011 484 C 1055 590, 1070 690, 1070 800 Z"/>
+      <path d="M1016 480 C 1070 445, 1135 452, 1185 495 C 1125 468, 1070 468, 1018 488 Z"/>
+      <path d="M1016 480 C 1050 425, 1110 400, 1170 405 C 1110 422, 1065 448, 1020 486 Z"/>
+      <path d="M1014 480 C 990 420, 945 392, 885 395 C 940 415, 980 442, 1010 486 Z"/>
+      <path d="M1014 482 C 960 462, 900 472, 855 515 C 910 488, 960 484, 1012 490 Z"/>
+    </g>
+
+    <!-- fade into page -->
+    <rect width="1200" height="800" fill="url(#fade)"/>
+  </svg>
+
+  <div class="hero-content">
+    <span class="eyebrow">🏐 Beach volleyball · Doubles</span>
+    <h1>Eric's Bday Sesh</h1>
+    <p class="hero-when">Friday, Dec 18 · 7 to 10 PM</p>
+    <p class="hero-where">Treasure Valley Beach · Meridian</p>
+  </div>
+  <div class="hero-cta">
+    <a class="btn sea" id="rsvpTop" href="#" target="_blank" rel="noopener">RSVP 🌺</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= QUICK FACTS ================= -->
+  <section class="card">
+    <div class="facts">
+      <div class="fact">
+        <div>
+          <h3>When</h3>
+          <p>Friday, December 18<br>7:00 to 10:00 PM</p>
+        </div>
+      </div>
+      <div class="fact">
+        <div>
+          <h3>Where</h3>
+          <p>Treasure Valley Beach<br>1252 E Piper Ct, Meridian, ID 83642<br>
+          <a href="https://www.google.com/maps/search/?api=1&query=Treasure+Valley+Beach+1252+E+Piper+Ct+Meridian+ID+83642" target="_blank" rel="noopener">Open in Maps →</a></p>
+        </div>
+      </div>
+      <div class="fact">
+        <div>
+          <h3>Cost</h3>
+          <p>Free. Courts are covered.</p>
+        </div>
+      </div>
+      <div class="fact">
+        <div>
+          <h3>Presents</h3>
+          <p>Not allowed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOTE FROM ERIC ================= -->
+  <section class="card note">
+    <h2>A note from Eric</h2>
+    <p>I'm turning an undisclosed age. Don't worry about it.</p>
+    <p>The courts are rented, so just come and buy a drink or two for yourself (that helps the business). No presents allowed. Your presence is my present.</p>
+    <p class="sig">~ Eric</p>
+    <div class="plus-one">
+      <span style="font-size:1.4rem">💛</span>
+      <span>You are encouraged to +1 your volleyball-playing significant other.</span>
+    </div>
+  </section>
+
+  <!-- ================= RSVP ================= -->
+  <section class="card rsvp" id="rsvp">
+    <h2>Who's coming</h2>
+    <p class="muted">Let me know if you can make it, so I can determine if the numbers will work for the format.</p>
+    <a class="btn sea" id="rsvpMain" href="#" target="_blank" rel="noopener">RSVP 🌺</a>
+    <p class="count" id="count"></p>
+    <ul class="names" id="names"></ul>
+  </section>
+
+  <!-- ================= FORMAT ================= -->
+  <section class="card">
+    <span class="tag">If the numbers work</span>
+    <h2>Proposed format</h2>
+    <p>Three courts, doubles, and lots of mixing. You'll play with almost everyone by the end of the night.</p>
+
+    <ol class="steps">
+      <li>
+        <h3>Thai style for Courts 1 &amp; 2</h3>
+        <p class="muted">Eight players per court, two games at once, alternating after each point.</p>
+      </li>
+      <li>
+        <h3>Bowl for teams</h3>
+        <p class="muted">Before each new game on Courts 1 &amp; 2.</p>
+      </li>
+      <li>
+        <h3>Kings on Court 3</h3>
+      </li>
+    </ol>
+
+    <div class="ladder" aria-label="How players move between courts">
+      <div class="court c1">
+        <div class="label">Court 1 · Thai Style</div>
+        <div class="sub">2 alternating games · play to 15 · winners stay, losers down</div>
+      </div>
+      <div class="court c2">
+        <div class="label">Court 2 · Thai Style</div>
+        <div class="sub">2 alternating games · play to 15 · winners up, losers down</div>
+      </div>
+      <div class="court c3">
+        <div class="label">Court 3 · Kings</div>
+        <div class="sub">Play until the other games are done · top 4 move up</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="ball">🏐</span>
+  See you on the sand.
+</footer>
+
+<script>
+  /* ================= CONFIG =================
+     1. FORM_URL: the share link from your Google Form ("Send" → link icon).
+     2. NAMES_CSV_URL: the "Publish to web" CSV link for the Sheet tab that lists
+        the first names of everyone who said Yes (one name per row, with a header row).
+     Leave either one blank and the page still works; it just hides that part.
+  */
+  const CONFIG = {
+    FORM_URL: "https://forms.gle/2gGEWCC9MMuTJTRv5",
+    NAMES_CSV_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTDnCeM0eLEIcHIcaL8oRLp9DN1hShSRZu9f8sgwszYtEz7nQveNLPCoeZZw1akHq7Htbx7mPsMHr3f/pub?gid=1392948994&single=true&output=csv"
+  };
+
+  // Wire up RSVP buttons
+  document.querySelectorAll("#rsvpTop, #rsvpMain").forEach(function (a) {
+    if (CONFIG.FORM_URL) {
+      a.href = CONFIG.FORM_URL;
+    } else {
+      a.href = "#rsvp";
+      a.removeAttribute("target");
+      a.addEventListener("click", function (e) {
+        if (a.id === "rsvpMain") {
+          e.preventDefault();
+          alert("RSVP form coming soon!");
+        }
+      });
+    }
+  });
+
+  // Simple CSV line parser (handles quoted values)
+  function parseLine(line) {
+    const out = [];
+    let cur = "", inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const c = line[i];
+      if (inQ) {
+        if (c === '"' && line[i + 1] === '"') { cur += '"'; i++; }
+        else if (c === '"') { inQ = false; }
+        else { cur += c; }
+      } else {
+        if (c === '"') inQ = true;
+        else if (c === ",") { out.push(cur); cur = ""; }
+        else cur += c;
+      }
+    }
+    out.push(cur);
+    return out;
+  }
+
+  // Load the "Who's coming" list
+  async function loadNames() {
+    if (!CONFIG.NAMES_CSV_URL) return;
+    try {
+      const res = await fetch(CONFIG.NAMES_CSV_URL + (CONFIG.NAMES_CSV_URL.includes("?") ? "&" : "?") + "t=" + Date.now());
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const text = await res.text();
+      const rows = text.split(/\r?\n/).map(parseLine);
+      const names = rows.slice(1)               // skip header row
+        .map(function (r) { return (r[0] || "").trim(); })
+        .filter(function (n) { return n.length > 0; });
+
+      const list = document.getElementById("names");
+      list.innerHTML = "";
+      names.forEach(function (n) {
+        const li = document.createElement("li");
+        li.textContent = n;                     // textContent keeps it safe
+        list.appendChild(li);
+      });
+
+      // Each name counts as 1, plus 1 more if they're bringing a partner ("Sarah +1" or "Sarah + Mike")
+      const total = names.reduce(function (sum, n) { return sum + (n.indexOf("+") !== -1 ? 2 : 1); }, 0);
+      if (total > 0) {
+        document.getElementById("count").textContent =
+          total + (total === 1 ? " person is" : " people are") + " in 🏐";
+      }
+    } catch (err) {
+      console.warn("Couldn't load RSVP list:", err);
+    }
+  }
+  loadNames();
+</script>
+</body>
+</html>
